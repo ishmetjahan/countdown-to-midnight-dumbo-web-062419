@@ -4,6 +4,8 @@ def countdown (number)
   while number>0  
     puts "#{number} SECOND(S)!"
     number -=1 
+    time = Time.now
+ sleep 2.seconds until Time.now > time + 10.seconds # breaks when true
   end
   return "HAPPY NEW YEAR!"
 end
